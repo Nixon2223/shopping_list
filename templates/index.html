@@ -22,6 +22,11 @@
     <h2>{{ item.name }}</h2>
     <h3>Price: {{ item.price }}</h3>
     <h4>Quantity: {{ item.quantity }}</h4>
+    <form action="/shopping_list" method = "post">
+    <input type="checkbox" id="bought" name="bought" value= True>
+    <input type="submit">
+    </form>
+    
     {% endfor %}
 
 
