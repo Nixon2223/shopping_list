@@ -1,7 +1,7 @@
 h1 {
-    font-size: 11vh;
+    margin-top: 0;
+    font-size: 9vh;
     text-align: center;
-    margin: 5%;
 }
 body{
     /* background img from: https://www.toptal.com/designers/subtlepatterns/ */
@@ -10,6 +10,18 @@ body{
     width: 70%;
     padding: 20px;
     margin: auto;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+  }
+
+.form_item{
+    font-size: 2vh;
+    float: right;
+    background-color: #000000a1;
+    color: white;
+}
+.filters {
+      float:left;
   }
 
 tbody tr:nth-child(odd) {
@@ -24,7 +36,7 @@ tbody tr:nth-child(even) {
 table {
     width: 100%;
     padding: 1%;
-    font-size: 5vh;
+    font-size: 4vh;
     background-color: #000000a1;
   }
 
@@ -37,6 +49,11 @@ table {
     font-size: 5vh;
     display:flex;
     background-color: #000000a1;
+    justify-content:space-around
+}
+
+.bought, .remove {
+    text-align: center;
 }
 
 

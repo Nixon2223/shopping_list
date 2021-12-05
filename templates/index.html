@@ -15,34 +15,41 @@
     <input type="submit" value="Add Item">
 </form>
 
-<form action="/shopping_list/bought_filterF">
-    <input type="submit" value="show not bought" />
-</form>
-<form action="/shopping_list/bought_filterA">
-    <input type="submit" value="show all" />
-</form>
-<form action="/shopping_list/bought_filterT">
-    <input type="submit" value="show bought" />
-</form>
+<article>
+    <div class = "filters">
+        <form action="/shopping_list/bought_filterA">
+            <input type="submit" value="show all" />
+        </form>
+        <form action="/shopping_list/bought_filterT">
+            <input type="submit" value="show bought" />
+        </form>
+        <form action="/shopping_list/bought_filterF">
+            <input type="submit" value="show not bought" />
+        </form>
+    </div>
+</article>
+
+
+
 <table>
     <tr>
-        <td></td>
+        <td class = "bought"></td>
         <td>Item</td>
         <td>Price</td>
         <td>Quantity</td>
-        <td></td>
+        <td class = "remove"></td>
     {% for item in items %}
     <tr> 
         {% if item.bought == False %}
-        <td><a href="/shopping_list/bought{{items.index(item)}}" class = "bought_button_F">&#9744;</a></td>
+        <td class = "bought"><a href="/shopping_list/bought{{items.index(item)}}" class = "bought_button_F">&#9744;</a></td>
         {% endif %}
         {% if item.bought == True %}
-        <td><a href="/shopping_list/bought{{items.index(item)}}" class = "bought_button_T">&#9989;</a></td>
+        <td class = "bought"><a href="/shopping_list/bought{{items.index(item)}}" class = "bought_button_T">&#9989;</a></td>
         {% endif %}
         <td>{{ item.name }}</td>
         <td>{{ item.price }}</td>
         <td>{{ item.quantity }}</td>
-        <td><a href="/shopping_list/remove{{items.index(item)}}" class = "remove_button">&#10005;</a></td>
+        <td class = "remove"><a href="/shopping_list/remove{{items.index(item)}}" class = "remove_button">&#10005;</a></td>
     
     {% endfor %}
 </table>
