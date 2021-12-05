@@ -35,5 +35,11 @@ def filter_bought(items, i):
             if item.bought == False:
                 new_list.append(item)
     return new_list
-      
+    
+def bought_count(items):
+    n = 0
+    for item in items:
+            if item.bought == True:
+                n += 1
+    return n
 

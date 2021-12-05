@@ -6,7 +6,8 @@ from models.items import *
 def index():
   t = total_price(items)
   l = len(items)
-  return render_template('index.html', title = 'Home', items = items, t=t, l=l)
+  c = bought_count(items)
+  return render_template('index.html', title = 'Home', items = items, t=t, l=l, c=c)
 
 @app.route('/shopping_list', methods=['POST'])
 def add_item():
@@ -28,6 +29,7 @@ def order_bought_filter(i):
   new_items = filter_bought(items, i)
   t = total_price(new_items)
   l = len(new_items)
+  c = bought_count(new_items)
   if i == "T" or i == "F":
-    return render_template('index.html', title = 'Home', items = new_items, t=t, l=l)
+    return render_template('index.html', title = 'Home', items = new_items, t=t, l=l, c=c)
   return redirect('/shopping_list')

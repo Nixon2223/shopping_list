@@ -26,11 +26,11 @@
 </form>
 <table>
     <tr>
-        <td>Bought</td>
+        <td></td>
         <td>Item</td>
         <td>Price</td>
         <td>Quantity</td>
-        <td>Remove</td>
+        <td></td>
     {% for item in items %}
     <tr> 
         {% if item.bought == False %}
@@ -46,7 +46,8 @@
     
     {% endfor %}
 </table>
-<p>total: {{t}} </p>
-<p>total: {{l}} </p> 
-
+<div class= "totals">
+    <p>{{c}}/{{l}} </p> 
+    <p>total: {{t}} </p>
+</div>
 {% endblock  %}

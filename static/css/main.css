@@ -1,20 +1,46 @@
-body {
-    background: url(img/christmas-colour.png) no-repeat center center fixed;
-    background-repeat: repeat; 
-}
-
 h1 {
+    font-size: 11vh;
     text-align: center;
+    margin: 5%;
 }
 body{
+    /* background img from: https://www.toptal.com/designers/subtlepatterns/ */
     background: url(img/christmas-colour.png) no-repeat center center fixed;
     background-repeat: repeat; 
+    width: 70%;
+    padding: 20px;
+    margin: auto;
   }
 
-
+tbody tr:nth-child(odd) {
+    background-color: #507efcfa;
+  }
+  
+tbody tr:nth-child(even) {
+    background-color: #90ace7;
+  }
 
   
-/* snowflake animation from: https://codepen.io/codeconvey/pen/xRzQay*/
+table {
+    width: 100%;
+    padding: 1%;
+    font-size: 5vh;
+    background-color: #000000a1;
+  }
+
+.bought_button_F{text-decoration: none;}
+.bought_button_T{text-decoration: none;}
+.remove_button{text-decoration: none;}
+
+.totals {
+    color: white;
+    font-size: 5vh;
+    display:flex;
+    background-color: #000000a1;
+}
+
+
+/* snowflake animation from: https://codepen.io/codeconvey/pen/xRzQay */
   .snowflake {
     color: #fff;
     font-size: 2em;
