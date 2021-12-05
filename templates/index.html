@@ -15,20 +15,38 @@
     <input type="submit" value="Add Item">
 </form>
 
-
-
-
+<form action="/shopping_list/bought_filterF">
+    <input type="submit" value="show not bought" />
+</form>
+<form action="/shopping_list/bought_filterA">
+    <input type="submit" value="show all" />
+</form>
+<form action="/shopping_list/bought_filterT">
+    <input type="submit" value="show bought" />
+</form>
+<table>
+    <tr>
+        <td>Bought</td>
+        <td>Item</td>
+        <td>Price</td>
+        <td>Quantity</td>
+        <td>Remove</td>
     {% for item in items %}
-    <h2>{{ item.name }}</h2>
-    <h3>Price: {{ item.price }}</h3>
-    <h4>Quantity: {{ item.quantity }}</h4>
-    <form action="/shopping_list" method = "post">
-    <input type="checkbox" id="bought" name="bought" value= True>
-    <input type="submit">
-    </form>
+    <tr> 
+        {% if item.bought == False %}
+        <td><a href="/shopping_list/bought{{items.index(item)}}" class = "bought_button_F">&#9744;</a></td>
+        {% endif %}
+        {% if item.bought == True %}
+        <td><a href="/shopping_list/bought{{items.index(item)}}" class = "bought_button_T">&#9989;</a></td>
+        {% endif %}
+        <td>{{ item.name }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.quantity }}</td>
+        <td><a href="/shopping_list/remove{{items.index(item)}}" class = "remove_button">&#10005;</a></td>
     
     {% endfor %}
-
-
+</table>
+<p>total: {{t}} </p>
+<p>total: {{l}} </p> 
 
 {% endblock  %}
