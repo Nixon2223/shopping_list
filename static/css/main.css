@@ -24,6 +24,11 @@ body{
       float:left;
   }
 
+label {
+    text-align: right;
+    width: 75px;
+    display: inline-block;
+}
 tbody tr:nth-child(odd) {
     background-color: #507efcfa;
   }

@@ -1,16 +1,13 @@
 from models.item import *
 
-item1 = Item("tea bags", 1.50, 1, False)
+item1 = Item("carrots", 1.00, 1, False)
 item2 = Item("bread", 1.00, 1, False)
-item3 = Item("bananas", 0.20, 4, True)
-item4 = Item("tea bags", 1.50, 1, False)
-item5 = Item("bread", 1.00, 1, False)
-item6 = Item("bananas", 0.20, 4, False)
-item7 = Item("tea bags", 1.50, 1, False)
-item8 = Item("bread", 1.00, 1, True)
-item9 = Item("bananas", 0.20, 4, False)
+item3 = Item("potatoes", 0.80, 2, True)
+item4 = Item("soup", 0.50, 4, False)
+item5 = Item("tea", 0.75, 1, True)
 
-items = [item1, item2, item3, item4, item5, item6, item7, item8, item9]
+
+items = [item1, item2, item3, item4, item5]
 
 def add_new_item(new_item):
     items.append(new_item)
